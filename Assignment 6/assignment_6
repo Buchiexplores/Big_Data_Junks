@@ -41,6 +41,9 @@ hdfs dfs -put ~/datasets/albums.csv /user/databases/csv
 
 ##################################################################################
 
+create database musicdb;
+use musicdb;
+
 #6 Create Hive tables
 
 #Create Hive External Table 1

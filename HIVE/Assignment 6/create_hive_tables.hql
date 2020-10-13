@@ -39,24 +39,27 @@ CREATE TABLE genre_internal(
     labels VARCHAR(1000),
     Names VARCHAR(255))
 ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-LOCATION '/user/databases/postgresql/musicdb/genre/';
+FIELDS TERMINATED BY ',';
+
+insert overwrite table genre_internal select * from genre_external;
 
 CREATE TABLE subgenre_internal (
     id VARCHAR(1000),
     labels VARCHAR(1000),
     Names VARCHAR(255))
 ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-LOCATION '/user/databases/postgresql/musicdb/subgenre/';
+FIELDS TERMINATED BY ',';
+
+insert overwrite table subgenre_internal select * from subgenre_external;
 
 CREATE TABLE year_internal(
     id VARCHAR(255),
     label VARCHAR(255),
     name int)
 ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-LOCATION '/user/databases/postgresql/musicdb/year/';
+FIELDS TERMINATED BY ',';
+
+insert overwrite table year_internal select * from year_external;
 
 CREATE TABLE albums_internal(
     id VARCHAR(255),
@@ -65,7 +68,8 @@ CREATE TABLE albums_internal(
     year INT,
     number INT)
 ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-LOCATION '/user/databases/csv/';
+FIELDS TERMINATED BY ',';
+
+insert overwrite table albums_internal select * from albums_external;
 
 

@@ -41,8 +41,11 @@ hdfs dfs -put ~/datasets/albums.csv /user/databases/csv
 
 ##################################################################################
 
-create database musicdb;
-use musicdb;
+create database raw;
+create database dsl;
+create database asl;
+
+use raw;
 
 #6 Create Hive tables
 
@@ -89,6 +92,8 @@ LOCATION '/user/databases/csv/';
 
 #Creating Hive Internal Table
 
+use dsl;
+
 CREATE TABLE genre_internal(
     id VARCHAR(1000),
     labels VARCHAR(1000),
@@ -126,3 +131,8 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ',';
 
 insert overwrite table albums_internal select * from albums_external;
+
+#Execute scripts
+
+hive -f create_hive_internal_tables.hql
+hive -f create_hive_external_tables.hql

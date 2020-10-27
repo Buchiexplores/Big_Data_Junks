@@ -16,7 +16,7 @@ case $db1 in
 
   "$key")
 echo "################################## Creating Sqoop Job $val #############################################################"
-sqoop job --create $val -- import --connect jdbc:mysql://localhost/musicbrainz --username root --password-file file:///home/fieldemployee/Big_Data_Training/HIVE_HBASE/gcp/passwords/mysql.password --table $val --m 1 --target-dir /user/input/mysql/$val/
+sqoop job --create $val -- import --connect jdbc:mysql://localhost/musicbrainz --username root --password-file file:///home/fieldemployee/bin/passwords/mysql.password --table $val --m 1 --target-dir /user/input/mysql/$val/
 
     ;;
 esac
@@ -25,7 +25,7 @@ case $tb1 in
 
   "$val")
 echo "################################## Creating Sqoop Job $val #############################################################"
-sqoop job --create $val -- import --connect jdbc:mysql://localhost/musicbrainz --username root --password-file file:///home/fieldemployee/Big_Data_Training/HIVE_HBASE/gcp/passwords/mysql.password --table $val --m 1 --columns id,edge_id,fr0m,t0,label --target-dir /user/input/mysql/$val/
+sqoop job --create $val -- import --connect jdbc:mysql://localhost/musicbrainz --username root --password-file file:// file:///home/fieldemployee/bin/passwords/mysql.password --table $val --m 1 --columns id,edge_id,fr0m,t0,label --target-dir /user/input/mysql/$val/
 
     ;;
 esac
@@ -43,7 +43,7 @@ case $db2 in
 
   "$key")
 echo "################################## Creating Sqoop Job $val #############################################################"
-sqoop job --create  $val -- import --connect jdbc:postgresql://localhost:5432/musicbrainz --username postgres --password-file file:///home/fieldemployee/Big_Data_Training/HIVE_HBASE/gcp/passwords/postgres_local.password --m 1 --table $val --target-dir /user/input/postgresql/$val/
+sqoop job --create  $val -- import --connect jdbc:postgresql://localhost:5432/musicbrainz --username postgres --password-file  file:///home/fieldemployee/bin/passwords/postgres_local.password --m 1 --table $val --target-dir /user/input/postgresql/$val/
     ;;
 esac
 
@@ -51,7 +51,7 @@ case $db3 in
 
   "$key")
 echo "################################## Creating Sqoop Job $val #############################################################"
-sqoop job --create $val -- import --connect 'jdbc:sqlserver://localhost:1433;databaseName=master' --username 'SA' --password-file file:///home/fieldemployee/Big_Data_Training/HIVE_HBASE/gcp/passwords/sqlserver.password --m 1 --table $val --target-dir /user/input/sqlserver/$val/
+sqoop job --create $val -- import --connect 'jdbc:sqlserver://localhost:1433;databaseName=master' --username 'SA' --password-file  file:///home/fieldemployee/bin/passwords/sqlserver.password --m 1 --table $val --target-dir /user/input/sqlserver/$val/
     ;;
 esac
 

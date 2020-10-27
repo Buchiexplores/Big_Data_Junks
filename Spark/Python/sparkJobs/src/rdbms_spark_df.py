@@ -14,7 +14,7 @@ postgresql_connector_path = "/usr/local/spark-2.4.7/jars/postgresql-connector-ja
 sqlserver_connector_path = "/usr/local/spark-2.4.7/jars/mssql-connector-java.jar"
 
 #set authentication path
-auth_path = '/home/fieldemployee/Big_Data_Training/Spark/conf/db.ini'
+auth_path = '/home/fieldemployee/bin/conf/db.ini'
 
 # Define databases servers to use
 db1 = "mysql"

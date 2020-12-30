@@ -1,6 +1,5 @@
-/*  Big-Data Traiining (Practice exercise)
-	Author: Abuchi Okeke
-	Date: 09/29/20
+/* 
+    Author: Abuchi Okeke
     Description: Executing analytical functions on sakila-database
     */
     

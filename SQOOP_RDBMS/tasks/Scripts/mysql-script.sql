@@ -1,6 +1,4 @@
 /* Author: Abuchi Okeke
- * Big Data Training
- * Date: 10/02/2020
  * Description: MySQL script to create database, tables and importing data through .csv file
  */
 

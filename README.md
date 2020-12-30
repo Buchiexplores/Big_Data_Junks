@@ -1,4 +1,21 @@
-# Linux_setup_09232020
+MY JUNKS FOR BIG DATA TECHNOLOGIES
+#Hadoop
+#Hive
+#FLume
+#Spark (Pyspark)
+#Nifi
+#HBase
+#Airflow
+#Kafka
+#Sqoop
+
+
+##CLOUD Computing
+#AWS
+#Azure
+#GCP
+
+#Databricks
 
 This is a repo where I dumped all junks for my personal Big Data projects and practices
 

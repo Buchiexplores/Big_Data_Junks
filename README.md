@@ -1,20 +1,32 @@
 IT IS MESSY IN HERE LOL!
 
 MY JUNKS FOR BIG DATA TECHNOLOGIES
+
 #Hadoop
+
 #Hive
+
 #FLume
+
 #Spark (Pyspark)
+
 #Nifi
+
 #HBase
+
 #Airflow
+
 #Kafka
+
 #Sqoop
 
 
 ##CLOUD Computing
+
 #AWS
+
 #Azure
+
 #GCP
 
 #Databricks

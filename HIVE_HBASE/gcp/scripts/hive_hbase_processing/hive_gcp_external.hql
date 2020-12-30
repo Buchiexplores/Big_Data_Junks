@@ -16,6 +16,23 @@ WITH SERDEPROPERTIES (
 LOCATION '/user/input/postgresql/genre/'
 TBLPROPERTIES ("skip.header.line.count"="1");
 
+
+DROP TABLE IF EXISTS raw.stocks_dev;
+CREATE EXTERNAL TABLE raw.stocks_dev(
+    open float,
+    high float,
+    low float,
+    close float,
+    volume int,
+    datee TIMESTAMP,
+    timestampp TIMESTAMP)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+"separatorChar" = ",",
+"quoteChar" = "\"")
+LOCATION '/user/kafka/streams';
+#TBLPROPERTIES ("skip.header.line.count"="1");
+
 DROP TABLE IF EXISTS raw.subgenre_external;
 CREATE EXTERNAL TABLE raw.subgenre_external (
     id VARCHAR(1000),

@@ -4,6 +4,7 @@ postgresql=artist
 postgresql=genre
 postgresql=subgenre
 postgresql=year
+postgresql=tracks
 sqlserver=playlist
 sqlserver=playlisttrack
-sqlserver=tracks
+

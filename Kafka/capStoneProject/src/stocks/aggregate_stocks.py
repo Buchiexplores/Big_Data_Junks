@@ -3,7 +3,6 @@
 Author: @Abuchi Okeke
 Date: 11/07/2020
 
-Unit test for alpha vantage
 """
 
 import pyspark
